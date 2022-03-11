@@ -1,0 +1,62 @@
+/* ------------------- */
+/* Components         */
+/* ------------------- */
+
+.large-button {
+  position: relative;
+  display: grid;
+  z-index: 1;
+  place-content: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  text-decoration: none;
+  &::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(var(--clr-white) / .15);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+  }
+   &:hover::after,
+   &:focus::after {
+     opacity: 1;
+     transform: scale(1.5);
+  }
+}
+
+.primary-navigation {
+  --gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: hsl(0, 0, 0, .06);
+  & a {
+    text-decoration: none;
+    & > span {
+      font-weight: 700;
+      margin-right: .5em;
+      //color: hsl(var(--clr-white) / .25);
+    }
+  }
+}
+
+.underline-indicators {
+  & > * {
+    padding: var(--underline-gap, 1rem) 0;
+    border-bottom: .2rem solid hsl(var(--clr-white) / 0);
+    &:hover,
+    &:focus {
+      border-color: hsl(var(--clr-white) / .5);
+    }
+  }
+  & > .active {
+    border-color: hsl( var(--clr-white) / 1);
+  }
+
+}

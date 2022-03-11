@@ -1,0 +1,25 @@
+{
+  "name": "fem-space-tourism-multi-page-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaduHarangus/FEM-Space-tourism-multi-page-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaduHarangus/FEM-Space-tourism-multi-page-website/issues"
+  },
+  "homepage": "https://github.com/RaduHarangus/FEM-Space-tourism-multi-page-website#readme",
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "grunt-contrib-concat": "^2.0.0",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
