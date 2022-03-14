@@ -37,6 +37,8 @@ body {
   background-color: hsl(var(--clr-dark));
   line-height: 1.5;
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 /* make images easier to work with */
 img,
@@ -105,15 +107,20 @@ select {
   max-width: 80rem;
 }
 .grid-container {
+  border: 5px solid limegreen;
   display: grid;
-  column-gap: var(--container-gap, 2rem);
-  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
 }
-.grid-container > *:first-child {
-  grid-column: 2;
-}
-.grid-container > *:last-child {
-  grid-column: 3;
+@media (min-width: 45rem) {
+  .grid-container {
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+  }
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
 }
 .sr-only {
   position: absolute;
