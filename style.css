@@ -196,14 +196,13 @@ select {
 .numbered-title span {
   margin-right: 0.5em;
   font-weight: 700;
-  color: hsl(var(--clr-white) / 0.25);
 }
 /* ------------------- */
 /* Components         */
 /* ------------------- */
 .large-button {
   position: relative;
-  display: grid;
+  display: inline-grid;
   z-index: 1;
   place-content: center;
   padding: 0 2em;
@@ -288,4 +287,59 @@ select {
 .number-indicators [aria-selected="true"] {
   color: hsl(var(--clr-dark));
   background-color: hsl(var(--clr-white));
+}
+.main {
+  min-height: 100vh;
+  background-size: 100% 100%;
+  background: url("/assets/home/background-home-mobile.jpg") no-repeat center fixed;
+}
+@media (min-width: 700px) {
+  .main {
+    background-image: url("/assets/home/background-home-tablet.jpg");
+  }
+}
+@media (min-width: 1024px) {
+  .main {
+    background-image: url("/assets/home/background-home-desktop.jpg");
+  }
+}
+.hero {
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+  }
+}
+.hero-wrapper {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .hero-wrapper {
+    text-align: left;
+  }
+}
+.hero-wrapper {
+  width: 327px;
+  margin-inline: auto;
+}
+@media (min-width: 700px) {
+  .hero-wrapper {
+    width: 450px;
+  }
+}
+.button-wrapper {
+  aspect-ratio: 1;
+  width: 150px;
+  margin-inline: auto;
+}
+@media (min-width: 700px) {
+  .button-wrapper {
+    width: 242px;
+  }
+}
+@media (min-width: 1024px) {
+  .button-wrapper {
+    width: 274px;
+  }
 }
