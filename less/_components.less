@@ -67,3 +67,21 @@
 .tab-list {
   --gap: 2rem;
 }
+
+.dot-indicators {
+  & > * {
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    padding: .5em;
+    background-color: hsl( var(--clr-white) / .25);
+    &:hover,
+    &:focus {
+      background-color: hsl( var(--clr-white) / .5);
+    }
+  }
+  & [aria-selected="true"] {
+    background-color: hsl( var(--clr-white) / 1);
+  }
+}
