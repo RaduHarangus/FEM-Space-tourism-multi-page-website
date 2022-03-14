@@ -85,3 +85,21 @@
     background-color: hsl( var(--clr-white) / 1);
   }
 }
+
+.number-indicators {
+  & > * {
+    cursor: pointer;
+    border: 1px solid hsl( var(--clr-white) / .25);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 80px;
+    &:hover,
+    &:focus {
+      border-color: hsl( var(--clr-white) / .5);
+    }
+  }
+  & [aria-selected="true"] {
+    color: hsl( var(--clr-dark) );
+    background-color: hsl( var(--clr-white) );
+  }
+}
