@@ -275,11 +275,26 @@ select {
   transform: scale(1.5);
 }
 .primary-navigation {
-  --gap: 8rem;
   --underline-gap: 2rem;
+  --gap: 8rem;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+@media (max-width: 35em) {
+  .primary-navigation {
+    --underline-gap: 0.5rem;
+    --gap: 1rem;
+    position: fixed;
+    inset: 0 0 0 30%;
+    z-index: 1000;
+    flex-direction: column;
+    background: black;
+    padding: min(20rem, 15vh) 2rem;
+  }
+  .primary-navigation.underline-indicators > .active {
+    border: 0;
+  }
 }
 .primary-navigation a {
   text-decoration: none;
