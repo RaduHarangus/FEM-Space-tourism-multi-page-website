@@ -282,7 +282,6 @@ select {
   padding: 0;
   margin: 0;
   background: hsl(var(--clr-dark) / 0.9);
-  transition: transform 0.3s ease-in-out;
 }
 @supports (backdrop-filter: blur(1.5rem)) {
   .primary-navigation {
@@ -297,9 +296,11 @@ select {
     position: fixed;
     inset: 0 0 0 30%;
     z-index: 1000;
-    flex-direction: column;
     padding: min(20rem, 15vh) 2rem;
+    margin: 0;
+    flex-direction: column;
     transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
   }
   .primary-navigation[data-visible="true"] {
     transform: translateX(0);
@@ -330,8 +331,16 @@ select {
     border: 0;
     background-image: url("./assets/shared/icon-hamburger.svg");
     background-repeat: no-repeat;
+    background-position: center;
     width: 1.5rem;
     aspect-ratio: 1;
+  }
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url("./assets/shared/icon-close.svg");
+  }
+  .mobile-nav-toggle:focus-visible {
+    outline: 5px solid white;
+    outline-offset: 5px;
   }
 }
 .underline-indicators > * {
