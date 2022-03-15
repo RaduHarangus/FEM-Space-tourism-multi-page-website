@@ -126,19 +126,29 @@ select {
   max-width: 80rem;
 }
 .grid-container {
-  border: 5px solid limegreen;
   display: grid;
+  text-align: center;
+  place-items: center;
+  padding-inline: 1rem;
+}
+.grid-container > * {
+  max-width: 50ch;
 }
 @media (min-width: 45em) {
   .grid-container {
+    text-align: left;
     column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
   }
   .grid-container > *:first-child {
     grid-column: 2;
   }
   .grid-container > *:last-child {
     grid-column: 3;
+  }
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
   }
 }
 .sr-only {
@@ -238,6 +248,7 @@ select {
 /* Components         */
 /* ------------------- */
 .large-button {
+  font-size: 2rem;
   position: relative;
   display: inline-grid;
   z-index: 1;
