@@ -280,6 +280,8 @@ select {
   list-style: none;
   padding: 0;
   margin: 0;
+  background: hsl(var(--clr-white) / 0.05);
+  backdrop-filter: blur(1.5rem);
 }
 @media (max-width: 35em) {
   .primary-navigation {
@@ -289,7 +291,6 @@ select {
     inset: 0 0 0 30%;
     z-index: 1000;
     flex-direction: column;
-    background: black;
     padding: min(20rem, 15vh) 2rem;
   }
   .primary-navigation.underline-indicators > .active {
