@@ -43,6 +43,8 @@
     backdrop-filter: blur(1.5rem);
   }
 
+  transform: translateX(100%);
+
   @media (max-width: 35em) {
     --underline-gap: .5rem;
     --gap: 1rem;
@@ -63,6 +65,23 @@
       margin-right: .5em;
       //color: hsl(var(--clr-white) / .25);
     }
+  }
+}
+
+.mobile-nav-toggle {
+  display: none;
+  @media (max-width: 35em) {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 1rem;
+    top: 2rem;
+    background: transparent;
+    border: 0;
+    background-image: url("./assets/shared/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    aspect-ratio: 1;
   }
 }
 
