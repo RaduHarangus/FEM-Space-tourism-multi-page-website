@@ -282,7 +282,7 @@ select {
   padding: 0;
   margin: 0;
   background: hsl(var(--clr-dark) / 0.9);
-  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 }
 @supports (backdrop-filter: blur(1.5rem)) {
   .primary-navigation {
@@ -299,6 +299,10 @@ select {
     z-index: 1000;
     flex-direction: column;
     padding: min(20rem, 15vh) 2rem;
+    transform: translateX(100%);
+  }
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0);
   }
   .primary-navigation.underline-indicators > .active {
     border: 0;
@@ -321,6 +325,7 @@ select {
     z-index: 2000;
     right: 1rem;
     top: 2rem;
+    cursor: pointer;
     background: transparent;
     border: 0;
     background-image: url("./assets/shared/icon-hamburger.svg");
@@ -376,6 +381,11 @@ select {
 .number-indicators [aria-selected="true"] {
   color: hsl(var(--clr-dark));
   background-color: hsl(var(--clr-white));
+}
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
 /* ------------------------------ */
 /* Page specific background       */
