@@ -36,8 +36,12 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  background: hsl( var(--clr-white) / .05);
-  backdrop-filter: blur(1.5rem);
+  background: hsl( var(--clr-dark) / .9);
+
+  @supports (backdrop-filter: blur(1.5rem)) {
+    background: hsl( var(--clr-white) / .05);
+    backdrop-filter: blur(1.5rem);
+  }
 
   @media (max-width: 35em) {
     --underline-gap: .5rem;
