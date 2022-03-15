@@ -285,7 +285,7 @@ select {
 }
 .primary-navigation {
   --underline-gap: 2rem;
-  --gap: 2rem;
+  --gap: clamp(1.5rem, 5vw, 3.5rem);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -297,6 +297,11 @@ select {
 .primary-navigation a > span {
   font-weight: 700;
   margin-right: 0.5em;
+}
+@media (min-width: 35em) and (max-width: 45em) {
+  .primary-navigation a > span {
+    display: none;
+  }
 }
 @supports (backdrop-filter: blur(1.5rem)) {
   .primary-navigation {
@@ -326,10 +331,7 @@ select {
 }
 @media (min-width: 35em) and (max-width: 45em) {
   .primary-navigation {
-    padding-inline: 2rem;
-  }
-  .primary-navigation a > span {
-    display: none;
+    padding-inline: 3rem;
   }
 }
 .mobile-nav-toggle {

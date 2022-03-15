@@ -43,7 +43,7 @@
 
 .primary-navigation {
   --underline-gap: 2rem;
-  --gap: 2rem;
+  --gap: clamp(1.5rem, 5vw, 3.5rem);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -54,6 +54,9 @@
       font-weight: 700;
       margin-right: .5em;
       //color: hsl(var(--clr-white) / .25);
+      @media (min-width: 35em) and (max-width: 45em) {
+        display: none;
+      }
     }
   }
 
@@ -83,10 +86,7 @@
     }
   }
   @media (min-width: 35em) and (max-width: 45em) {
-    padding-inline: 2rem;
-    & a > span {
-      display: none;
-    }
+    padding-inline: 3rem;
   }
 }
 
