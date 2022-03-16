@@ -1,0 +1,62 @@
+/* ----------------------------- */
+/* Layout                        */
+/* ----------------------------- */
+
+.numbered-title {
+  grid-area: title;
+}
+
+.grid-container {
+  display: grid;
+  text-align: center;
+  place-items: center;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+  & > * {
+    max-width: 50ch;
+  }
+  &--destination {
+    --flow-space: 2rem;
+    grid-template-areas:
+        'title'
+        'image'
+        'tabs'
+        'content';
+
+    & > img {
+      grid-area: image;
+      max-width: 60%;
+    }
+
+    & > .tab-list {
+      grid-area: tabs;
+    }
+
+    & > .destination-info {
+      grid-area: content;
+    }
+  }
+
+  @media (min-width: 45em) {
+    text-align: left;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
+    & > *:first-child {
+      grid-column: 2;
+    }
+    & > *:last-child {
+      grid-column: 3;
+    }
+    &--home {
+      padding-bottom: max(6rem, 20vh);
+      align-items: end;
+    }
+  }
+}
+
+.destination-meta {
+  flex-direction: column;
+  border-top: 1px solid hsl( var(--clr-white) / .1);
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+}
