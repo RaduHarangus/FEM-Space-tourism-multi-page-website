@@ -78,7 +78,7 @@ select {
   --fs-800: 3.5rem;
   --fs-700: 1.5rem;
   --fs-600: 1rem;
-  --fs-500: 1.75rem;
+  --fs-500: 1rem;
   --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
@@ -92,6 +92,7 @@ select {
     --fs-800: 5rem;
     --fs-700: 2.5rem;
     --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
     --fs-400: 1rem;
   }
 }
@@ -100,6 +101,7 @@ select {
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
+    --fs-500: 1.75rem;
     --fs-400: 1.125rem;
   }
 }
@@ -257,6 +259,7 @@ select {
 .numbered-title span {
   margin-right: 0.5em;
   font-weight: 700;
+  color: hsl(var(--clr-white) / 0.25);
 }
 /* ------------------- */
 /* Components         */
@@ -462,5 +465,23 @@ body {
 @media (min-width: 45em) {
   .home {
     background-image: url("./assets/home/background-home-desktop.jpg");
+  }
+}
+/* ------------------------------ */
+/* Page specific background       */
+/* ------------------------------ */
+/* destination */
+.destination {
+  background-image: url("./assets/destination/background-destination-mobile.jpg");
+}
+@media (min-width: 35em) {
+  .destination {
+    background-position: center center;
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+  }
+}
+@media (min-width: 45em) {
+  .destination {
+    background-image: url("./assets/destination/background-destination-desktop.jpg");
   }
 }
