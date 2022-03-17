@@ -254,7 +254,7 @@ select {
   padding-inline: 1rem;
   padding-bottom: 4rem;
 }
-.grid-container > * {
+.grid-container p:not([class]) {
   max-width: 50ch;
 }
 @media (min-width: 45em) {
@@ -317,7 +317,7 @@ select {
 }
 @media (min-width: 45em) {
   .destination-meta {
-    --gap: 6rem;
+    --gap: min(6vw, 6rem);
     justify-content: start;
   }
 }

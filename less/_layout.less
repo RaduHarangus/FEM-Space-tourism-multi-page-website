@@ -17,7 +17,7 @@
   padding-inline: 1rem;
   padding-bottom: 4rem;
 
-  & > * {
+  & p:not([class]) {
     max-width: 50ch;
   }
 
@@ -87,7 +87,7 @@
     justify-content: space-evenly;
   }
   @media (min-width: 45em) {
-    --gap: 6rem;
+    --gap: min(6vw, 6rem);
     justify-content: start;
   }
 }
