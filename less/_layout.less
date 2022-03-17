@@ -4,6 +4,11 @@
 
 .numbered-title {
   grid-area: title;
+  @media (min-width: 35em) {
+    justify-self: start;
+    margin-top: 2.5rem;
+    padding-left: 1rem;
+  }
 }
 
 .grid-container {
@@ -57,9 +62,12 @@
     grid-area: content;
   }
 
-  @media (min-width: 35em) {
-
-  }
+  //@media (min-width: 45em) {
+  //  grid-template-areas:
+  //    'title'
+  //    'image' 'tabs'
+  //    'image' 'content';
+  //}
 }
 
 
@@ -70,7 +78,7 @@
   margin-top: 2.5rem;
   @media (min-width: 35em) {
     flex-direction: row;
+    justify-content: space-evenly;
     text-align: center;
-    justify-content: space-between;
   }
 }

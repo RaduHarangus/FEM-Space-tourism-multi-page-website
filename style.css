@@ -147,7 +147,7 @@ select {
   color: hsl(var(--clr-dark));
   padding: 0.5em 1em;
   margin-inline: auto;
-  transform: translateY(-100%);
+  transform: translateY(-110%);
   transition: transform 250ms ease-in;
 }
 .skip-to-content:focus {
@@ -241,6 +241,13 @@ select {
 .numbered-title {
   grid-area: title;
 }
+@media (min-width: 35em) {
+  .numbered-title {
+    justify-self: start;
+    margin-top: 2.5rem;
+    padding-left: 1rem;
+  }
+}
 .grid-container {
   display: grid;
   text-align: center;
@@ -291,8 +298,8 @@ select {
 @media (min-width: 35em) {
   .destination-meta {
     flex-direction: row;
+    justify-content: space-evenly;
     text-align: center;
-    justify-content: space-between;
   }
 }
 /* ------------------- */
