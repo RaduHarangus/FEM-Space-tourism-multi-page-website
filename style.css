@@ -123,6 +123,9 @@ select {
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }
+.flow--space-small {
+  --flow-space: 0.5rem;
+}
 .container {
   padding-inline: 2em;
   margin-inline: auto;
@@ -137,7 +140,6 @@ select {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  /* added line */
   border: 0;
 }
 .skip-to-content {
@@ -327,6 +329,9 @@ select {
 .grid-container--crew > .crew-details {
   grid-area: article;
 }
+.grid-container--crew > .crew-details h2 {
+  color: hsl(var(--clr-white) / 0.5);
+}
 @media (min-width: 35em) {
   .grid-container--crew {
     padding-bottom: 0;
@@ -497,9 +502,10 @@ nav {
 }
 .underline-indicators > * {
   cursor: pointer;
-  padding: var(--underline-gap, 1rem) 0;
+  padding: var(--underline-gap, 0.5rem) 0;
   border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+  background-color: transparent;
 }
 .underline-indicators > *:hover,
 .underline-indicators > *:focus {
