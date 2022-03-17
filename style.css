@@ -281,12 +281,12 @@ select {
   --flow-space: 2rem;
   grid-template-areas: 'title' 'image' 'tabs' 'content';
 }
-.grid-container--destination > img {
+.grid-container--destination > picture {
   grid-area: image;
   max-width: 60%;
 }
 @media (min-width: 45em) {
-  .grid-container--destination > img {
+  .grid-container--destination > picture {
     max-width: 90%;
   }
 }
@@ -308,13 +308,13 @@ select {
   --flow-space: 2rem;
   grid-template-areas: 'title' 'image' 'dots' 'article';
 }
-.grid-container--crew > img {
+.grid-container--crew > picture {
   grid-area: image;
   max-width: 60%;
   border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
 }
 @media (min-width: 45em) {
-  .grid-container--crew > img {
+  .grid-container--crew > picture {
     max-width: 90%;
   }
 }
