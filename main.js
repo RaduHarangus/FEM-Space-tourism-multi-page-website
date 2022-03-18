@@ -15,9 +15,10 @@ navToggle.addEventListener("click", () => {
 const tabList = document.querySelector('[role="tabList"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
 
-let tabFocus = 0;
+tabList.addEventListener('keydown', changeTabFocus);
 
-tabList.addEventListener('keydown', (e) => {
+let tabFocus = 0;
+function changeTabFocus(e) {
     const keydownLeft = 37;
     const keydownRight = 39;
 
@@ -26,11 +27,19 @@ tabList.addEventListener('keydown', (e) => {
     }
 
     if (e.keyCode === keydownRight) {
-        tabs[++tabFocus].setAttribute("tabindex", 0);
+        ++tabFocus;
+        if (tabFocus >= tabs.length) {
+            tabFocus = 0;
+        }
     }
-
 
     if (e.keyCode === keydownLeft) {
-        tabs[--tabFocus].setAttribute("tabindex", 0);
+        --tabFocus;
+        if (tabFocus < 0) {
+            tabFocus = tabs.length - 1;
+        }
     }
-});
+
+    tabs[tabFocus].setAttribute("tabindex", 0);
+    tabs[tabFocus].focus();
+}

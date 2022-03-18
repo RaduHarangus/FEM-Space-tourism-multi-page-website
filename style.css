@@ -239,6 +239,9 @@ select {
   font-weight: 700;
   color: hsl(var(--clr-white) / 0.25);
 }
+[role="tab"]:focus {
+  color: limegreen;
+}
 /* ----------------------------- */
 /* Layout                        */
 /* ----------------------------- */
