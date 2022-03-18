@@ -53,6 +53,7 @@
   & > picture {
     grid-area: image;
     max-width: 60%;
+    align-self: start;
     @media (min-width: 45em) {
       max-width: 90%;
     }
@@ -91,7 +92,8 @@
     max-width: 60%;
     border-bottom: 1px solid hsl( var(--clr-white) / .1);
     @media (min-width: 45em) {
-      //align-self: end;
+      grid-column: span 2;
+      align-self: end;
       max-width: 90%;
     }
   }
@@ -120,6 +122,8 @@
   }
 
   @media (min-width: 45em) {
+    justify-items: start;
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
     grid-template-areas:
       '. title title .'
       '. article image .'

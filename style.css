@@ -286,6 +286,7 @@ select {
 .grid-container--destination > picture {
   grid-area: image;
   max-width: 60%;
+  align-self: start;
 }
 @media (min-width: 45em) {
   .grid-container--destination > picture {
@@ -317,6 +318,8 @@ select {
 }
 @media (min-width: 45em) {
   .grid-container--crew > picture {
+    grid-column: span 2;
+    align-self: end;
     max-width: 90%;
   }
 }
@@ -342,6 +345,8 @@ select {
 }
 @media (min-width: 45em) {
   .grid-container--crew {
+    justify-items: start;
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
     grid-template-areas: '. title title .' '. article image .' '. dots image .';
   }
 }
