@@ -41,6 +41,12 @@ function changeTabPanel(e) {
     const mainContainer = tabContainer.parentNode;
     const targetImage = targetTab.getAttribute('data-image');
 
+    tabContainer
+        .querySelector('[aria-selected="true"]')
+        .setAttribute('aria-selected', false);
+
+    targetTab.setAttribute('aria-selected', true);
+
     mainContainer
         .querySelectorAll('[role="panel"]')
         .forEach((panel) => {
@@ -56,9 +62,6 @@ function changeTabPanel(e) {
         });
 
     mainContainer.querySelector(`#${targetImage}`).removeAttribute('hidden');
-
-
-    // console.log(mainContainer);
-    }
+}
 
 
