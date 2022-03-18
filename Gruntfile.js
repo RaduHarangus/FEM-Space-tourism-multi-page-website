@@ -42,5 +42,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
 
     // the default task can be run just by typing "grunt" on the command line
-    grunt.registerTask('default', ['less', 'concat', 'watch']);
+    grunt.registerTask('default', ['less', 'watch']);
 }
