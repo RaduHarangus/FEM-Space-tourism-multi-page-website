@@ -114,6 +114,7 @@
 
   @media (min-width: 35em) {
     padding-bottom: 0;
+    grid-template-rows: 1fr 2fr 1fr 4fr;
     grid-template-areas:
       '. title title .'
       '. article article .'
@@ -124,6 +125,7 @@
   @media (min-width: 45em) {
     justify-items: start;
     grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
+    grid-template-rows: 20% 54% 26%;
     grid-template-areas:
       '. title title .'
       '. article image .'
