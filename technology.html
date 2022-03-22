@@ -49,14 +49,14 @@
     <img src="assets/technology/image-space-capsule-landscape.jpg" alt="Space Capsule">
   </picture>
 
-  <div class="number-indicators flex">
-      <button aria-selected="true" class="fs-600 ff-serif text-white bg-dark" tabindex="0">1</button>
-      <button aria-selected="false" class="fs-600 ff-serif text-white bg-dark" tabindex="-1">2</button>
-      <button aria-selected="false" class="fs-600 ff-serif text-white bg-dark" tabindex="-1">3</button>
+  <div class="number-indicators flex" role="tabList">
+      <button aria-selected="true" aria-controls="launch-vehicle-tab" class="fs-600 ff-serif text-white bg-dark" role="tab" data-image="launch-vehicle-image" tabindex="0">1</button>
+      <button aria-selected="false" aria-controls="spaceport-tab" class="fs-600 ff-serif text-white bg-dark" role="tab" data-image="spaceport-image" tabindex="-1">2</button>
+      <button aria-selected="false" aria-controls="space-capsule-tab" class="fs-600 ff-serif text-white bg-dark" role="tab" data-image="space-capsule-image" tabindex="-1">3</button>
   </div>
 
   <!-- launch-vehicle -->
-  <article class="technology-details flow" id="launch-vehicle-tab" tabindex="0" role="panel">
+  <article class="technology-details flow" id="launch-vehicle-tab" role="panel" tabindex="0">
     <header class="flow flow--space-small">
       <h2 class="fs-400 ff-serif uppercase text-accent">The terminology...</h2>
       <p class="fs-700 uppercase ff-serif">Launch vehicle</p>
@@ -70,7 +70,7 @@
   <!-- spaceport -->
   <article hidden class="technology-details flow" id="spaceport-tab" tabindex="0" role="panel">
     <header class="flow flow--space-small">
-      <h2 class="fs-600 ff-serif uppercase text-accent">The terminology...</h2>
+      <h2 class="fs-400 ff-serif uppercase text-accent">The terminology...</h2>
       <p class="fs-700 uppercase ff-serif">Spaceport</p>
     </header>
     <p class="text-accent">A spaceport or cosmodrome is a site for launching (or receiving) spacecraft,
@@ -82,7 +82,7 @@
   <!-- space-capsule -->
   <article hidden class="technology-details flow" id="space-capsule-tab" tabindex="0" role="panel">
     <header class="flow flow--space-small">
-      <h2 class="fs-600 ff-serif uppercase text-accent">The terminology...</h2>
+      <h2 class="fs-400 ff-serif uppercase text-accent">The terminology...</h2>
       <p class="fs-700 uppercase ff-serif">Space capsule</p>
     </header>
     <p class="text-accent">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry
