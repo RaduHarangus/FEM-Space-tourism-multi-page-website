@@ -239,6 +239,9 @@ select {
   font-weight: 700;
   color: hsl(var(--clr-white) / 0.25);
 }
+.mw-50 {
+  max-width: 50ch;
+}
 /* ----------------------------- */
 /* Layout                        */
 /* ----------------------------- */
@@ -257,9 +260,6 @@ select {
   place-items: center;
   padding-inline: 1rem;
   padding-bottom: 4rem;
-}
-.grid-container p:not([class]) {
-  max-width: 50ch;
 }
 @media (min-width: 45em) {
   .grid-container {
